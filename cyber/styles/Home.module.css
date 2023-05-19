@@ -1,0 +1,14 @@
+.btn {
+    background-color: rgb(37 99 235);
+    color: white;
+    width: 8rem;
+    /* height: 40px; */
+    margin: 8px 0px;
+    padding: 12px 0;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: capitalize;
+  }
+  .btn:hover{
+    background-color: rgb(29 78 216);
+  }
