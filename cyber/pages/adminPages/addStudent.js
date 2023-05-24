@@ -53,7 +53,7 @@ const [type, setType] = useState("student");
             <input
               type="Email"
               placeholder="Email"
-              pattern=".+@globex\.com"
+              pattern=".+@gmail\.com"
               size="30"
               value={email}
             onChange={(e) => setEmail(e.target.value)}

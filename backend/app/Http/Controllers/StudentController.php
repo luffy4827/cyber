@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class StudentController extends Controller
 {
@@ -25,7 +26,7 @@ class StudentController extends Controller
         $student = new Student();
         $student->name = $request->name;
         $student->email = $request->email;
-        $student->password = $request->password;
+        $student->password = Hash::make($request->password);
         $student->type = $request->type;
 
         $student->save();

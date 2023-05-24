@@ -1,7 +1,7 @@
 import React from "react";
 const Login = () => {
   return (
-    <div className="container flex justify-center items-center h-screen gap-2 ">
+    <div className="container flex justify-center items-center h-screen gap-2">
       <div className="login-form-1 shadow-lg w-1/2 p-16 ml-8 flex flex-col justify-center items-center">
         <h3 className="text-3xl font-bold text-blue-500 my-2 cursor-default">
           Student Login
