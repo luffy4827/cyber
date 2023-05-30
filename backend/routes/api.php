@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 // Route::delete('students/{student}',[StudentController::class, 'destroy']);
 
 Route::apiResource('students', StudentController::class);
+
+
+
+Route::apiResource('books', BookController::class);
