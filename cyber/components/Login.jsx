@@ -12,7 +12,7 @@ const Login = () => {
         <div className="w-full h-full relative bg-blue-200 shadow-2xl">
           <Image src="/2.png" alt="" fill style={{objectFit: "contain"}} />
         </div>
-        <div className="right flex flex-col justify-evenly cursor-default">
+        <div className="right flex flex-col justify-evenly cursor-default bg-white">
           <div className="">
             <h1 className="text-gray-800 text-4xl text-center font-bold py-4">
               Cyber <span className="text-blue-500"> Shelf</span>{" "}

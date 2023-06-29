@@ -3,7 +3,6 @@
       { "href": "/", "title": "Home" },
       { "href": "/adminPages/addStudent", "title": "Add Student" },
       { "href": "/adminPages/addBook", "title": "Add Book" },
-      { "href": "/adminPages/admin", "title": "Admin" },
       { "href": "/adminPages/bookReport", "title": "Book Report" },
       { "href": "/adminPages/bookRequest", "title": "Book Request" },
       { "href": "/adminPages/studentReport", "title": "Student Report" },

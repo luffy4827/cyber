@@ -37,6 +37,8 @@ const [type, setType] = useState("student");
           method="post"
           className="flex flex-col justify-center items-center"
         >
+
+          {/* name */}
           <div className="form-group my-2 ">
             <input
             value={name}
@@ -49,6 +51,8 @@ const [type, setType] = useState("student");
               className="px-4 h-12 my-2 border border-1 rounded-lg w-80"
             />
           </div>
+
+          {/* email */}
           <div className="form-group my-2 ">
             <input
               type="Email"
@@ -61,6 +65,8 @@ const [type, setType] = useState("student");
               className="px-4 h-12 my-2 border border-1 rounded-lg w-80"
             />
           </div>
+
+          {/* password */}
           <div className="form-group my-2">
             <input
               type="password"
@@ -73,6 +79,8 @@ const [type, setType] = useState("student");
             />
           </div>
           <div>
+
+            {/* type */}
             <label htmlFor="" className="mx-2 font-bold text-gray-700">
               Choose Type
             </label>

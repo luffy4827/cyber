@@ -7,18 +7,19 @@ const addBook = () => {
   const [details, setDetails] = useState("");
   const [author, setAuthor] = useState("");
   const [publication, setPublication] = useState("");
-  const [bim, setBim] = useState(false);
-  const [csit, setCsit] = useState(false);
-  const [bca, setBca] = useState(false);
+  const [branch, setBranch] = useState("");
+  // const [bim, setBim] = useState(false);
+  // const [csit, setCsit] = useState(false);
+  // const [bca, setBca] = useState(false);
   const [price, setPrice] = useState("");
-  const [qunatity, setQuantity] = useState("");
+  const [quantity, setQuantity] = useState("");
   const [photo, setPhoto] = useState("");
 
   const addBook = async () => {
 
     await axioss.get('http://localhost:8000/sanctum/csrf-cookie').then(getcsrvf => {
        axioss.post('http://localhost:8000/api/books', {
-        name,details,author,publication,branch,price,qunatity})
+        name,details,author,publication,branch,price,quantity,photo})
         .then(function (response) {                    
         console.log(response);
         })
@@ -42,6 +43,9 @@ const addBook = () => {
           method="post"
           className="flex flex-col justify-center items-center"
         >
+
+          /
+          {/* book */}
           <div className="form-group my-2 ">
             <input
               type="text"
@@ -54,6 +58,8 @@ const addBook = () => {
               className="px-4 h-12 my-2 border border-1 rounded-lg w-80"
             />
           </div>
+
+          {/* detail */}
           <div className="form-group my-2 ">
             <input
               type="text"
@@ -62,10 +68,11 @@ const addBook = () => {
               value={details}
               onChange={(e) => setDetails(e.target.value)}
               minLength="10"
-              maxLength="20"
               className="px-4 h-12 my-2 border border-1 rounded-lg w-80"
             />
           </div>
+
+          {/* author */}
           <div className="form-group my-2 ">
             <input
               type="text"
@@ -73,24 +80,42 @@ const addBook = () => {
               required
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
-              minLength="10"
+              minLength="2"
               maxLength="20"
               className="px-4 h-12 my-2 border border-1 rounded-lg w-80"
             />
           </div>
+
+          {/* publication */}
           <div className="form-group my-2 ">
             <input
               type="text"
               placeholder="Publication"
               required
               value={publication}
-              onChange={(e) => setName(e.target.value)}
-              minLength="10"
-              maxLength="20"
+              onChange={(e) => setPublication(e.target.value)}
+              minLength="2"
+              maxLength="40"
               className="px-4 h-12 my-1 border border-1 rounded-lg w-80"
             />
           </div>
-          <div className="form-group my-2 mx-2 font-semibold text-blue-gray-200 flex gap-3">
+
+          {/* branch */}
+          <div className="form-group my-2 ">
+            <input
+              type="text"
+              placeholder="Branch"
+              required
+              value={branch}
+              onChange={(e) => setBranch(e.target.value)}
+              minLength="2"
+              maxLength="40"
+              className="px-4 h-12 my-1 border border-1 rounded-lg w-80"
+            />
+          </div>
+
+
+          {/* <div className="form-group my-2 mx-2 font-semibold text-blue-gray-200 flex gap-3">
             <div>
               <label> Branch: </label>
             </div>
@@ -98,7 +123,7 @@ const addBook = () => {
               <input
                 type="checkbox"
                 id="Book1"
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setBranch(e.target.value)}
                 name="BIM"
                 value="Book"
                 className="cursor-pointer"
@@ -111,6 +136,7 @@ const addBook = () => {
                 type="checkbox"
                 id="Book2"
                 name="CSIT"
+                onChange={(e) => setBranch(e.target.value)}
                 value="Book"
                 className="cursor-pointer"
               />
@@ -122,6 +148,7 @@ const addBook = () => {
                 type="checkbox"
                 id="Book3"
                 name="BCA"
+                onChange={(e) => setBranch(e.target.value)}
                 value="Book"
                 className="cursor-pointer"
               />
@@ -130,7 +157,9 @@ const addBook = () => {
                 BCA
               </label>
             </div>
-          </div>
+          </div> */}
+
+          {/* Price */}
           <div className="form-group my-2 ">
             <input
               type="number"
@@ -140,11 +169,13 @@ const addBook = () => {
               className="px-4 h-12 my-2 border border-1 rounded-lg w-80"
             />
           </div>
+
+          {/* quantity */}
           <div className="form-group my-2 ">
             <input
               type="number"
               placeholder="Quantity"
-              value={qunatity}
+              value={quantity}
               onChange={(e) => setQuantity(e.target.value)}
               className="px-4 h-12 my-2 border border-1 rounded-lg w-80"
             />

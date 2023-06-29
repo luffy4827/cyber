@@ -41,7 +41,7 @@ class BookController extends Controller
         $book->save();
 
         return response()->json([
-            'message'=>'Book Is Sucessfully Added',
+            'message'=>'Book Is Successfully Added',
             'data'=>$book
         ]);
 

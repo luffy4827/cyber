@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('details');
             $table->string('author');
             $table->string('publication');
-            $table->string('branch');
+            $table->enum('branch', ["BIM", "CSIT", "BCA"]);
             $table->string('price');
             $table->string('quantity');
             $table->string('photo');

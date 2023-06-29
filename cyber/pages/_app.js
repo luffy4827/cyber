@@ -5,11 +5,11 @@ import Layout from '../components/Layout'
 
 export default function App({ Component, pageProps }) {
   return <>
-   {/* <Navbar />
+   <Navbar />
    <Layout>
       <Component {...pageProps} />
-    </Layout> */}
-   <Login />
+    </Layout>
+   {/* <Login /> */}
 
    {/* <Component {...pageProps} /> */}
    </>
